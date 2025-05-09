@@ -25,6 +25,10 @@ export const registerUser = (userData) => {
     headers: headersWithContentType,
     body: JSON.stringify(userData),
     mode: "no-cors",
+  }).then(data=>{
+    console.log(data)
+    console.log(data.body)
+    console.log(data.body.json())
   })
 }
 
