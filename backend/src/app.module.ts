@@ -16,7 +16,7 @@ import { AppService } from './app.service';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'kpd-db',
       port: 5432,
       username: 'student',
       password: 'student',

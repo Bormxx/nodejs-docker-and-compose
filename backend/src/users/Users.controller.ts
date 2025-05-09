@@ -23,10 +23,10 @@ export class UsersController {
     private readonly wishService: WishService,
     private readonly passwordService: PasswordService,
   ) {}
-  // @Post()
-  // create(@Body() createUserDTO: CreateUserDto) {
-  //   return this.userService.create(createUserDTO);
-  // }
+  @Post()
+  create(@Body() createUserDTO: CreateUserDto) {
+    return this.userService.create(createUserDTO);
+  }
   @Get('me')
   findMe(@Req() req: { user: User }) {
     return this.userService.findMe(req.user.username);
