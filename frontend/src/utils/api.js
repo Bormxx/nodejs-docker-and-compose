@@ -20,15 +20,12 @@ const headersWithAuthorizeFn = () => ({
 
 export const registerUser = (userData) => {
   console.log(userData)
-  axios.post(`${URL}/signup`, userData)
-  .then(checkResponse)
-  .catch((err) => {return Promise.reject(err)})
-  // return fetch(`${URL}/signup`, {
-  //   method: "POST",
-  //   headers: headersWithContentType,
-  //   body: JSON.stringify(userData),
-  //   mode: "no-cors",
-  // })
+  return fetch(`${URL}/signup`, {
+    method: "POST",
+    headers: headersWithContentType,
+    body: JSON.stringify(userData),
+    mode: "no-cors",
+  }).then(checkResponse)
 }
 
 export const loginUser = (username, password) => {
