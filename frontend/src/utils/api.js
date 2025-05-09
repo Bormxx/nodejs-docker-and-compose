@@ -25,7 +25,7 @@ export const registerUser = (userData) => {
     headers: headersWithContentType,
     body: JSON.stringify(userData),
     mode: "no-cors",
-  }).then(checkResponse)
+  })
 }
 
 export const loginUser = (username, password) => {
