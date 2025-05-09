@@ -19,6 +19,7 @@ const headersWithAuthorizeFn = () => ({
 })
 
 export const registerUser = (userData) => {
+  console.log(userData)
   return fetch(`${URL}/signup`, {
     method: "POST",
     headers: headersWithContentType,
