@@ -22,7 +22,16 @@ export class AuthService {
       ...createUserDto,
       password: hashedPassword,
     });
-    return user;
+    const result = {
+      id: user.id,
+      username: user.username,
+      about: user.about,
+      avatar: user.avatar,
+      email: user.email,
+      createdAt: user.createdAt,
+      updatedAt: user.updatedAt,
+    }
+    return result;
   }
   // Метод для генерации токена пользователя
   async login(user: User) {
