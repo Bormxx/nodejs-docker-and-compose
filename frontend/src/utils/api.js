@@ -24,7 +24,6 @@ export const registerUser = (userData) => {
     method: "POST",
     headers: headersWithContentType,
     body: JSON.stringify(userData),
-    mode: "no-cors",
   }).then(checkResponse)
 }
 
@@ -32,7 +31,6 @@ export const loginUser = (username, password) => {
   return fetch(`${URL}/signin`, {
     method: "POST",
     headers: headersWithContentType,
-    mode: "no-cors",
     body: JSON.stringify({username, password}),
   })
     .then(checkResponse)
