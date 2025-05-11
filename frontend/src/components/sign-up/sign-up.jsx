@@ -21,10 +21,10 @@ export const SignUp = ({ extraClass = "" }) => {
   const [_user, setUser] = useContext(UserContext);
   const [userData, setUserData] = useState({
     username: "",
-    about: "",
-    avatar: "",
     email: "",
     password: "",
+    about: "",
+    avatar: "",
   });
   const [step, setStep] = useState(1);
   const [errorMessage, setErrorMessage] = useState("");
